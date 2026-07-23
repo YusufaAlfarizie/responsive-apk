@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button id="menu-toggle" aria-label="Buka Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1>To-Do App Ucupaxs</h1>
+    </header>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Kategori Tugas</h2>
+                <button id="close-sidebar" class="close-btn" aria-label="Tutup Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav>
+                <ul id="category-list">
+                    <li><button class="category-btn active" data-category="Semua"><i class="fas fa-list"></i> Semua</button></li>
+                    <li><button class="category-btn" data-category="Kerja"><i class="fas fa-briefcase"></i> Kerja</button></li>
+                    <li><button class="category-btn" data-category="Rumah"><i class="fas fa-home"></i> Rumah</button></li>
+                    <li><button class="category-btn" data-category="Belanja"><i class="fas fa-shopping-cart"></i> Belanja</button></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Overlay for Mobile Sidebar -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Main Area -->
+        <main class="main-content">
+            <header class="desktop-header">
+                <h1>To-Do List</h1>
+                <p>Kelola tugas Anda dengan mudah dan efisien.</p>
+            </header>
+
+            <section class="add-task-section">
+                <form id="task-form">
+                    <input type="text" id="task-input" placeholder="Apa yang ingin Anda kerjakan?" required>
+                    <select id="task-category">
+                        <option value="Kerja">Kerja</option>
+                        <option value="Rumah">Rumah</option>
+                        <option value="Belanja">Belanja</option>
+                    </select>
+                    <button type="submit" class="btn-primary">Tambah</button>
+                </form>
+            </section>
+
+            <section class="task-list-section">
+                <h2 id="current-category-title">Semua Tugas</h2>
+                <ul id="task-list" class="task-list">
+                    <!-- Tasks will be injected here via JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer class="app-footer">
+                <div class="footer-content">
+                    <div class="footer-text">
+                        <p>&copy; <span id="current-year"></span> Muhamad Yusufa Aria Al-Farizie. All Rights Reserved.</p>
+                        <p class="footer-subtext">Designed & Built with by Yusufa</p>
+                    </div>
+                    <div class="footer-social">
+                        <span>Connect with Me:</span>
+                        <div class="social-icons">
+                            <a href="https://instagram.com/yusufarizie_" target="_blank" aria-label="Instagram" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/YusufaAlfarizie" target="_blank" aria-label="GitHub" class="social-icon gh"><i class="fab fa-github"></i></a>
+                            <a href="http://www.youtube.com/@yusufaaria" target="_blank" aria-label="YouTube" class="social-icon yt"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/in/m-yusufa-aria-al-farizie-3286b4336/" target="_blank" aria-label="LinkedIn" class="social-icon ln"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
