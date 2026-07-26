@@ -222,7 +222,7 @@ body {
 
 .btn-primary {
     padding: 0.875rem 2rem;
-    background-color: black;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: var(--radius);
